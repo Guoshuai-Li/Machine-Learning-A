@@ -179,10 +179,3 @@ if __name__ == "__main__":
        best_k = np.argmin(mean_errors) + 1
        best_error = mean_errors[best_k-1]
        print(f"   n={n}: Best K = {best_k}, Best average error = {best_error:.3f}")
-   
-   print("\n3. Overall trends:")
-   print("   - Low K (1-5): Generally good performance")
-   print("   - High K (>30): Performance degrades significantly")
-   
-   print("\nQuestion 2 completed successfully!")
-   print("Generated files: figure1.png, figure2.png")
