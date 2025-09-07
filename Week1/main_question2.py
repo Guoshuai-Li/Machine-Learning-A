@@ -66,8 +66,8 @@ if __name__ == "__main__":
    print("="*60)
    
    # Load data files
-   data_file_path = "MNIST-5-6-Subset.txt"
-   labels_file_path = "MNIST-5-6-Subset-Labels.txt"
+   data_file_path = "D:/1-LGS/KU course/MLA/MNIST-5-6-Subset.txt"
+   labels_file_path = "D:/1-LGS/KU course/MLA/MNIST-5-6-Subset-Labels.txt"
    
    # Load image data (reshape to samples x features)
    data_matrix = np.loadtxt(data_file_path).reshape(1877, 784)
