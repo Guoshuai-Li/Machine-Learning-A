@@ -253,18 +253,3 @@ if __name__ == "__main__":
    print(f"1. Linear model: R² = {r2_linear:.4f} (best overall)")
    print(f"2. Non-linear with √x: R² = {r2_sqrt:.4f} (moderate)")
    print(f"3. Simple non-linear: R² = {r2_nonlinear:.4f} (worst)")
-   
-   print(f"\nKey Insights:")
-   print("1. Linear model performs best on original scale despite being simpler")
-   print("2. Input transformation (√x) improves fit compared to simple exp(ax+b)")
-   print("3. On log scale, √x model has much better fit (R² = 0.7861)")
-   print("4. The choice of error metric (original vs log scale) significantly")
-   print("   affects which model appears 'best'")
-   
-   print(f"\nFeature space interpretation:")
-   print("- √x transformation maps x to a feature space Z")
-   print("- This creates a more linear relationship in the log-transformed output")
-   print("- The model effectively learns h(x) = exp(φ(x)) where φ(x) = a√x + b")
-   
-   print("\nQuestion 3 completed successfully!")
-   print("Generated files: figure3.png, figure4.png")
