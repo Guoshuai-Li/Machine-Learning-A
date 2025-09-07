@@ -45,7 +45,7 @@ if __name__ == "__main__":
    print("="*30)
    
    # Load PCB regression data
-   pcb_file_path = "PCB.dt"
+   pcb_file_path = "D:/1-LGS/KU course/Machine Learning A/week1/PCB.dt"
    pcb_data = np.loadtxt(pcb_file_path)
    print(f"PCB data shape: {pcb_data.shape}")
    
