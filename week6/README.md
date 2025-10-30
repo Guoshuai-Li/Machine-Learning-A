@@ -1,13 +1,7 @@
 # MLA 2025 Final Exam - README
 
-**Student Submission for Machine Learning A (2025-2026)**  
 **Sections Completed: 4.1 - 4.4 (Alzheimer's Disease Diagnosis)**
 
----
-
-## Overview
-
-This README describes how to run the source code for the Alzheimer's Disease Diagnosis task (Section 4) of the MLA 2025 Final Exam. The implementation covers data preprocessing, PCA analysis, clustering, and classification tasks.
 
 ---
 
@@ -21,22 +15,6 @@ The code is implemented in **Python 3.12.3** and requires the following librarie
 - **numpy** - Numerical computations
 - **scikit-learn** - Machine learning algorithms (PCA, clustering, classification)
 - **matplotlib** - Plotting and visualization
-
-### Installation
-
-If you don't have these libraries installed, you can install them using:
-
-```bash
-pip install pandas numpy scikit-learn matplotlib
-```
-
-Or using conda:
-
-```bash
-conda install pandas numpy scikit-learn matplotlib
-```
-
----
 
 ## Data Files
 
@@ -52,8 +30,6 @@ The code expects the following data files to be in the same directory as the not
 ---
 
 ## Running the Code
-
-### Option 1: Using Jupyter Notebook (Recommended)
 
 1. **Open the notebook:**
    ```bash
@@ -73,20 +49,6 @@ The code expects the following data files to be in the same directory as the not
 3. **Run all cells:**
    - Click "Cell" → "Run All" in the menu, or
    - Press `Shift + Enter` to run each cell sequentially
-
-### Option 2: Running as a Python Script
-
-If you prefer to run the code as a script:
-
-1. Convert the notebook to a Python script:
-   ```bash
-   jupyter nbconvert --to script exam.ipynb
-   ```
-
-2. Run the generated Python file:
-   ```bash
-   python exam.py
-   ```
 
 ---
 
@@ -162,68 +124,6 @@ The code prints comprehensive results including:
 
 ---
 
-## Methodology Details
-
-### Software Used
-- **Python version:** 3.12.3
-- **Environment:** Jupyter Notebook / Conda
-- **Core libraries:** 
-  - scikit-learn 1.x for all ML algorithms
-  - pandas for data handling
-  - numpy for numerical operations
-  - matplotlib for visualization
-
-### Key Implementation Choices
-
-**PCA:**
-- Centered but not standardized (as per standard PCA)
-- Eigenvalues computed from covariance matrix via SVD
-
-**Clustering:**
-- Lloyd's algorithm (standard k-means)
-- k-means++ uses D² weighting for initialization
-- Cluster centers initialized as specified in exam (first point from each class)
-
-**Logistic Regression:**
-- Solver: 'lbfgs' (default)
-- Regularization: L2 (Ridge), default C=1.0
-- Max iterations: 10000 to ensure convergence
-
-**Random Forest:**
-- 200 trees (as specified)
-- Bootstrap samples with replacement
-- OOB error computed during training
-- Split criterion: Gini impurity
-
-**K-Nearest Neighbors:**
-- Distance metric: Euclidean (default)
-- Cross-validation: 5-fold stratified
-- k range: 1 to 50
-- Ties broken by first occurrence
-
----
-
-## Troubleshooting
-
-### Common Issues
-
-**Issue 1: File not found error**
-- **Solution:** Update file paths in Cell 1 to match your directory structure
-
-**Issue 2: Module not found error**
-- **Solution:** Install missing libraries using pip or conda (see Requirements section)
-
-**Issue 3: Memory error**
-- **Solution:** The dataset is small (2430 samples), but if you encounter memory issues, try closing other applications
-
-**Issue 4: Figures not displaying**
-- **Solution:** Ensure you're using `%matplotlib inline` in Jupyter or check that `plt.show()` is called
-
-**Issue 5: Random Forest OOB error is NaN**
-- **Solution:** Ensure `bootstrap=True` (default) and `oob_score=True` are set
-
----
-
 ## Notes
 
 - All random processes use fixed random seeds where applicable for reproducibility
@@ -233,25 +133,4 @@ The code prints comprehensive results including:
 
 ---
 
-## Contact
 
-If you encounter any issues running this code, please verify:
-1. All required libraries are installed
-2. Data files are in the correct location
-3. Python version is 3.8 or higher
-
----
-
-## Submission Contents
-
-This submission includes:
-1. **exam.ipynb** - Jupyter notebook with complete implementation
-2. **README.md** - This file, explaining how to run the code
-3. **Report.pdf** - Detailed answers and analysis (separate file)
-4. Generated figures (*.png files)
-
----
-
-**Last Updated:** October 31, 2025  
-**Exam:** Machine Learning A (2025-2026) Final Exam  
-**University of Copenhagen - Department of Computer Science**
